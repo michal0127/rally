@@ -1,2 +1,33 @@
 body{
- background-color
+    font-family: arial, tahoma, verdana, serif;
+    font-size: 12pt;
+    line-height: 1.5em;
+    background-color: green;
+ }
+
+h1 {
+    font-size: 250%;
+}
+
+h1, h2{
+    text-align: center;
+}
+.pochylony {
+    font-style: italic;
+    }
+
+.pogrubiony {
+    font-weight: bold;
+}
+
+li {
+    font: normal 16px/24px "comic sans sm";
+}
+
+.text1 {
+    color: red;
+}
+
+.text2 {
+    color: #F9FF23;
+}
