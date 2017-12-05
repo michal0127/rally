@@ -1,0 +1,54 @@
+function jezeli1(){
+  if (confirm("Nazywasz sie Adam?")){
+      console.log('Witaj Adam')
+  } else {
+    console.log('Witaj nie Adamie');
+  }
+}
+
+function jezeli2(){
+  liczba = prompt("Podaj liczbę całkowitą");
+  liczba = parseInt(liczba);
+  if (liczba >= 100){
+      console.log('Powyżej 99!');
+  } else if (liczba >= 50) {
+    console.log('Miedzy 50 a 99!')
+  } else {
+  console.log('Mniej niż 100!');
+  }
+}
+
+function jezeli3(){
+  liczba = prompt("Podaj liczbę całkowitą");
+  liczba = parseInt(liczba);
+  if (liczba >= 50 && liczba < 100){
+      console.log('Miedzy 50 a 99!');
+  } else if (liczba >= 100 || liczba , 50){
+  console.log('Ponizej 50 lub powyżej 99!');
+  }
+}
+
+function jezeli4(){
+  plec = 'K' ;
+  // plec = 'K'
+  switch(plec) {
+    case 'k':
+    case 'K:'
+      console.log('kobieta');
+      break;
+  }
+      plec = 'M'
+      switch(plec){
+    case 'm':
+      case'M':
+            console.log('mężczyzna');
+      break;
+  }
+}
+
+function jezeli5(){
+  if(plec==='k')
+    console.log('Kobieta')
+} else if(plec==='m' || plec==='M')
+  console.log(Mężczyzna)
+}
