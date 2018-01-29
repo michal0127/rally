@@ -39,20 +39,23 @@ function draw(){
   b = random(255);
 noFill();
 noStroke();
-}
+
+if (mouseIsPressed) {
+
+
 if (mouseButton === LEFT){
   strokeWeight(20);
-  fill(255, 255, 255);
+  stroke(r, g, b);
   fill(r, g ,b, 127)
 
 }
 
 if (mouseButton === CENTER){
 strokeweight(20);
-fill(r, g, b, 127);
-stroke(r, g, b);
-rect(mouseX-10 , mouseY-10, 20, 20);
+fill(255, 255, 255);
+stroke(255, 255, 255);
 
+}
 } else {
   noFill();
   noStroke();
