@@ -1,0 +1,39 @@
+﻿Projekty w JavaScript
+Proszę wpisać imię i nazwisko oraz login na githubie w odpowiednim projekcie
+Projekt 1a
+Temat: Gra w kółko i krzyżyk
+    1. wpisz imię i nazwisko, login na githubie
+    2. wpisz imię i nazwisko, login na githubie
+    3. itd.
+
+Projekt 2a
+Temat: Gra typu memy
+    1. wpisz imię i nazwisko, login na githubie
+    2. wpisz imię i nazwisko, login na githubie
+    3. itd.
+
+Projekt 3a
+Temat: Gra w statki
+    1. wpisz imię i nazwisko, login na githubie
+    2. wpisz imię i nazwisko, login na githubie
+    3. itd.
+
+Projekt 4a
+Temat: Pong
+    1. wpisz imię i nazwisko, login na githubie
+    2. wpisz imię i nazwisko, login na githubie
+    3. itd.
+
+Projekt 5a
+Temat: zaproponuj
+    1. wpisz imię i nazwisko, login na githubie
+    2. wpisz imię i nazwisko, login na githubie
+    3. itd.
+
+Projekt 6a
+Temat: zaproponuj
+    1. wpisz imię i nazwisko, login na githubie
+    2. wpisz imię i nazwisko, login na githubie
+    3. itd.
+
+
