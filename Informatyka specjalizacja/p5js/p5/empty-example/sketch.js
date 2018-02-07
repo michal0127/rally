@@ -44,7 +44,7 @@ if (mouseIsPressed) {
 
 
 if (mouseButton === LEFT){
-  strokeWeight(20);
+  strokeWeight(80);
   stroke(r, g, b);
   fill(r, g ,b, 127)
 
