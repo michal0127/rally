@@ -10,7 +10,7 @@ def dane_z_pliku(nazwa_pliku):
     with open(nazwa_pliku, 'r', newline='', encoding='utf-8') as plik:
             tresc = csv.reader(plik, delimiter='\t')
             for rekord in tresc:
-                rekord = [x.strip() for x in rekord]  # usuwa poste,
+                rekord = [x.strip() for x in rekord]  # usuwa puste,
             # niepotrzebna znaki (tralling spaces)
                 dane.append(rekord)  # dodawanie rekordów do listy
     return dane
@@ -32,7 +32,6 @@ def main(args):
 
     con.commit()  # zatwirdzenie w bazie
     con.close()  # zamknięcie bazy
-
     return 0
 
 

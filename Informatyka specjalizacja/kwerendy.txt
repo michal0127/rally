@@ -1,0 +1,26 @@
+ select * from filmy;  - wybiera wszystko z tabeli
+SELECT name AS nazwa, genre AS gatunek FROM filmy;  - wybiera
+SELECT DISTINCT genre FROM filmy;  -  wybiera tylko wartości unikalne, tytaj tylko genre, pokaże jakie są gatynki np. horror, akcja
+SELECT name AS tytul, FROM filmy WHERE rating < 5;  -  wybierze filmy których ocena jest mniejsza niż 5
+
+SELECT name AS tytul FROM filmy WHERE rating > 8.5 AND rating <>'' ORDER BY rating DESC;
+SELECT name AS tytul FROM filmy WHERE rating LIKE'' ORDER BY rating DESC;
+ --- zwracają filmy z oceną powyżej 8.5 (pierwszy) i bez rating (drugi)
+ 
+ UPDATE filmy SET rating=NULL WHERE rating=''; - zmienia zawartość bazy danych, koniecznie musi być WHERE, zmienia rating na NULL
+UPDATE filmy SET rating='' WHERE rating IS NULL; - odwraca sytuacje
+
+SELECT name AS tytul FROM filmy WHERE tytul LIKE 'Se_en'; - na podłodze może być dowolny znak, i takie wartości zwróci
+
+SELECT name AS tytul FROM filmy WHERE tytul LIKE 'S%';   -  zwróci wartości zaczynające się na s
+SELECT name AS tytul FROM filmy WHERE tytul LIKE 'S%n';  -  zwróci wartości zaczynające się na s i kończące sie na n
+SELECT name AS tytul FROM filmy WHERE tytul LIKE '%S';   -  kończące się na S
+
+SELECT name AS tytul FROM filmy WHERE name BETWEEN 'D' AND 'G'; - wybierze wartości z zakresu od D do H, bo G to granica nie wliczana do przedziału
+
+SELECT name, rating from filmy WHERE rating BETWEEN 5 AND 8;  -  wybierze wartości ratingu między 5 a 8 (obustronnie domknięty)
+
+SELECT name, rating FROM filmy WHERE year BETWEEN 1970 AND 1979 AND rating > 8; - wybierze filmy z lat osiemdziesiątych z oceną 8
+
+SELECT name, genre FROM filmy WHERE genre='drama' OR genre='action'; wybierze filmy gatunku akcji albo dramatu
+
