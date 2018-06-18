@@ -1,3 +1,5 @@
+ KWERENDY WYBIERAJĄCE
+ 
  select * from filmy;  - wybiera wszystko z tabeli
 SELECT name AS nazwa, genre AS gatunek FROM filmy;  - wybiera
 SELECT DISTINCT genre FROM filmy;  -  wybiera tylko wartości unikalne, tytaj tylko genre, pokaże jakie są gatynki np. horror, akcja
@@ -23,4 +25,37 @@ SELECT name, rating from filmy WHERE rating BETWEEN 5 AND 8;  -  wybierze warto�
 SELECT name, rating FROM filmy WHERE year BETWEEN 1970 AND 1979 AND rating > 8; - wybierze filmy z lat osiemdziesiątych z oceną 8
 
 SELECT name, genre FROM filmy WHERE genre='drama' OR genre='action'; wybierze filmy gatunku akcji albo dramatu
+
+
+
+KWERENDY AGREGUJĄCE
+
+SELECT AVG(downloads) FROM apps; --- otrzymamy średnią liczbę pobrań
+
+SELECT AVG(price) FROM apps; --- otrzymamy średnią cenę
+
+SELECT name, downloads FROM apps WHERE downloads > (SELECT AVG(downloads) FROM apps); --- podzapytanie
+
+SELECT name, downloads FROM apps WHERE downloads > (SELECT AVG(downloads) FROM apps) ORDER BY downloads DESC LIMIT 5;  --- wybiera z tego tylkjo 5 i to uporządkowane rosnąco
+
+SELECT COUNT( name) FROM apps WHERE downloads > (SELECT AVG(downloads) FROM apps);
+
+SELECT COUNT( name) FROM apps WHERE downloads < (SELECT AVG(downloads) FROM apps);
+
+SELECT COUNT(name) FROM apps;    SELECT COUNT(id) FROM apps; ---- poda wszystkie rekordy bez żadnych filtrów
+
+SELECT COUNT( name) FROM apps WHERE price > (SELECT AVG(price) FROM apps);  - cena mniejsza od średniej
+    
+SELECT COUNT( name) FROM apps WHERE price < (SELECT AVG(price) FROM apps);   - cena większa od średniej
+
+SELECT price, COUNT(*) FROM apps GROUP BY price; ile aplikacji ma jaką cenę
+
+SELECT price, SUM(price) FROM apps GROUP BY price;  ---- sumuje rekordy, zlicza ceny aplikacji o takich samych cenach
+
+SELECT category, SUM(downloads) AS suma_pobrań FROM apps GROUP BY category ORDER BY suma_pobrań DESC;  --- pokazuje które kategorie mają najwięcej pobrań
+
+SELECT category, price, AVG(downloads) FROM apps GROUP BY category, price;
+
+
+
 
