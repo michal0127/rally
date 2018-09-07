@@ -1,0 +1,57 @@
+html {
+  font-size: 1rem;
+}
+
+body {
+  background-image: url('../obrazy/książki.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover:
+}
+
+.wygląd {
+  background-color: #f2d18e;
+  border-radius: 8px;
+  margin: 4px;
+}
+
+.aktualności {
+  background-color: #f2d18e;
+  margin: 1rem;
+  width: 45rem;
+  border-radius: 8px;
+  padding: 1rem;
+  float:left;
+}
+
+.menu2{
+  background-color: #f2d18e;
+  margin: 1rem;
+  width: 45rem;
+  border-radius: 8px;
+  padding: 1rem;
+  float: right;
+
+}
+
+.tekst {
+  font-size: 1.5rem;
+}
+
+h2 {
+  background-color: red;
+  border-radius: 4px;
+}
+
+.publikacja {
+  border: 4px;
+  float: left;
+  width: 50%;
+  background-color: #f2d18e;
+  margin: 1rem;
+}
+
+
+.SHH {
+  margin-bottom: 1.3rem;
+}

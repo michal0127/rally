@@ -1,0 +1,21 @@
+body {
+  background-color: white;
+  font-style: tahoma;
+}
+
+h1 {
+  color: white;
+}
+
+.wiersz1 {
+  background-color: #ee3733;
+  color: white;
+}
+
+.tabeleczka {
+  border-radius: 50px;
+}
+
+.tabtytul {
+  border-radius: 20px;
+}
