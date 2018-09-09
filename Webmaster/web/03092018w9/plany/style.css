@@ -13,9 +13,13 @@ h1 {
 }
 
 .tabeleczka {
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .tabtytul {
   border-radius: 20px;
+}
+
+.klasa {
+  text-align: center;
 }
