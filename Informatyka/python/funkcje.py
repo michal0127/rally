@@ -2,6 +2,23 @@
 # -*- coding: utf-8 -*-
 # duck typing
 #wszystko co pobierane jest z domyślnego wejścia z terminala jest znakiem
+# zasięg zmiennych: zasięg lokalny (ograniczony np. funkcją)
+
+def suma(a, b):
+    return a + b
+
+    
+def różnica(a, b):
+    return a - b
+
+    
+def iloczyn(a, b):
+    return a * b
+
+    
+def iloraz(a, b):
+    return a / b
+
 
 def main(args):
     a = int(input("Podaj pierwszą liczbę: "))
@@ -9,10 +26,10 @@ def main(args):
     print(a) 
     print(b) 
     
-    print("Suma: ", a + b)
-    print("Różnica: ", a - b)
-    print("Iloczyn: ", a * b)
-    print("Iloraz: ", a / b)
+    print("Suma: ", suma(a, b))
+    print("Różnica: ", różnica(a, b))
+    print("Iloczyn: ", iloczyn(a, b))
+    print("Iloraz: ", iloraz(a, b))
      
     return 0
 

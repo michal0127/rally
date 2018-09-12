@@ -1,8 +1,7 @@
-/*
- * szkielet.cpp
+ /*
+ *funkcje1.cpp
  *
  */
-
 
 #include <iostream>
 /* io input/output czyli biblioteka wejścia/wyjścia w pythonie nie trzeba tego importować
@@ -10,8 +9,12 @@
 
 using namespace std;
 
-int main(int argc, char **argv)
-{
+int suma(int a, int b){
+       return a + b;
+}
+
+int main(int argc, char **argv){
+
     int a, b;
     a = b = 0;
     
@@ -23,12 +26,11 @@ int main(int argc, char **argv)
     cin >> b;
     cout << b;
     
-    cout << endl << "Suma: " << a + b << endl;
+    cout << endl << "Suma: " << suma(a, b) << endl;
     cout << "Różnica: " << a - b << endl;
     cout << "Iloczyn: "<< a * b << endl;
-    cout << "Iloraz: "<< a /b << endl;
+    cout << "Iloraz: "<< a / b << endl;
 
     return 0;
 }
 
-//DRY dont repeat yourself
