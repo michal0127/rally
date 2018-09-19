@@ -10,7 +10,7 @@ def main(args):
     stop = int(input("Druga liczba: "))
     
     while start >= stop:
-        stop = int(input("Podałeś większa liczbe niz pierwszą! Myśl co robisz i dawaj mi takie liczby jak się należy draniu: "))
+        stop = int(input("Podałeś mniejszą liczbe niz pierwszą! Myśl co robisz i dawaj mi takie liczby jak się należy draniu: "))
         
 
     for liczba in range(start, stop + 1):
