@@ -5,17 +5,12 @@
 #  
 
 def main(args):
-    
-    a = int(input("Pierwsza liczba: "))
-    b = int(input("Druga liczba: "))
-    
-    if a + b <= 75:
-        for liczba in range(a, b):
-            if liczba <= 75:
-                print(liczba)
-            
-    else:
-        print("Suma liczb przekroczyła 75")
+    a = 0
+    b = 0
+    while a <= 75:
+        a = int(input("Pierwsza liczba: "))
+        b = a + b
+        print("Wynik:", b)
     return 0
 
 if __name__ == '__main__':
