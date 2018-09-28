@@ -1,0 +1,70 @@
+Więzy integralności - constraints
+
+id INTEGER AUTONUMERIC
+PRIMARY KEY
+1
+2
+3
+4
+
+
+pole znakowe, "qaz" 
+UNIQUE - unikalność wartości w kolumnie
+NULL
+"" - ciąg pusty
+" " - to jest co innego
+NOT NULL - wartość w tym polu musi jakaś być, nie może być pusta
+
+NOT NULL PESEL: 12345678900
+FOREIGN KEY - definicja KLUCZA OBCEGO
+pole REFERENCES tabela(inne_pole)
+CHECK num1 > num2 - testowanie warości
+
+DEFAULT - wartość domyślna, 27-600
+
+Silniki baz danych:
+SQLite3 Studio
+MySQL
+MariaDB
+Postgesql
+Microsoft SQL Server
+Oracle Database
+
+Różne silniki mają różne typy danych,
+Integer ma swoje podtypy:
+BIGINT
+SMALLINT
+TINYINT
+
+REAL obejmuje:
+DECIMAL
+NUMERIC - liczby zmiennoprzecinkowe
+
+MONEY - format walutowy, typ zmiennoprzecinkowy - zżera 8 bajtów
+
+Dane tekstowe:
+CHARACTER(n), CHAR(n) - musimy na sztywno powiedzieć ile znaków chcemy wpisać, bo więcej nie wejdzie,
+
+VARCHAR(n)
+
+CHAR(20) ---> "qwertyuiop          " - dodaje tyle spacji żeby liczba znaków się zgadzała
+
+VARCHAR(20) ----> "qwertyuiop" - nawet jak podasz 20, to nie uzupełni tego spacjami
+
+Stosujemy VARCHAR, no chuba, że jesteś pewien ile znaków chcesz
+
+KODOWANIE = UTF-8 
+
+znaki łacińskie: qwertyuiopasdfghjklzxcvbnm
+
+żśćąęłó
+
+BLOB - pole binarne, używamy jak chcemy przechowywać w bazie obrazki, format 0, 1
+
+BOOLEAN - każty typ bulowski, albo prawda albo fałsz, system o, 1, 
+
+kobieta BOOLEAN
+
+TEXT as ISO 8601 ("RRRR-MM-DD GG:MM:SS.SSS")
+
+jest możliwość przechowywania daty jako liczby rzeczywistej, kalendarz juliański - numer dnia który upłynął od południa 24 listopada
