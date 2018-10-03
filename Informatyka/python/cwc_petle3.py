@@ -6,11 +6,11 @@
 
 def main(args):
     start = int(input(0))
-    while a > 0
+    while a > 0:
     stop = int(input("Druga liczba: "))
     
     if start < stop:
-        for liczba in range(start, (stop + 1) * (stop + 1):
+        for liczba in range(start, (stop + 1)^2:
                 print(liczba, " ", end="")
     return 0
 
