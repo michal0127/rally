@@ -6,29 +6,64 @@
 
 def liczby2(a, b):
     """
-    Drukuje wszystkie liczby dwucyfrowe o niepowtarzających się cyfrach
-    oraz zwraca ilość takich liczb, nie drukujemy takich liczb: 11, 22, 33, 
-    44, idt.
+    Drukuje wszystki liczby dwucydrowe, którym nie powatarzają się cyfry
+    np.: 11, 22, 33 ...
+    Oraz zwraca ich ilość
     """
-    for x range(a, b +1, 1)
-        for y in range()
-    
-    pass
 
-def liczby3():
-    """
-    Drukuje wszystkie liczby trzycyfrowe o niepowtarzających się cyfrach
-    oraz zwraca ilość takich liczb, nie drukujemy takich liczb: 113, 212, 373, 
-    441, idt.
-    """
+    ile = 0
+
+    for i in range(1, 10):
+        for j in range(0, 10):
+            if i ! = j
+                print("{}{}".format(i, j), end="")
+                ile +=1
+    return ile
+
+
+def liczby3(c, d, e):
     
-    pass
+    ile3 = 0
+
+    for i in range(100, 999):
+        for j in range(0, 10):
+            if i ! = j
+                print("{}{}".format(i, j), end="")
+                ile +=1
+    return ile
+
+    return suma
+
+
+def liczby3(a, b):
+    """
+    Drukuje wszystkie liczby 3 cyfrowe, gdzie nie powtarzają się cyfry
+    Bez 111 112 11x, 66x itd
+    """
+
+    ilosc = 0
+
+    for x in range(a, b + 1, 1):
+        c = x % 111
+        ile = x % 110
+        e = x % 101
+        g = x % 100
+        if c != 0 and ile != 0 and e != 0 and g != 0:
+            z = 0
+            z = int(x / 10)
+            if z % 11 != 0:
+                print(x)
+            ilosc = ilosc + 1
+    print("Ilośc takich liczb: ", ilosc)
+
+    return "To była funkcja Liczby3"
+
 
 def main(args):
-    
-    print(liczba2(a=10, b=99))
-    print(liczby3(a=100, b=999))
-    
+
+    print(liczby2(10, 99))
+    print(liczby3(100, 999))
+
     return 0
 
 if __name__ == '__main__':
