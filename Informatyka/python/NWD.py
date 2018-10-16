@@ -7,21 +7,18 @@
 #  
 
 def nwd(a, b):
-    if a == b:
-    r = a % b
-    if r > 0:
-        a = b
-        b = r
-        while r==0:
-            r=a%b
-  else:
-    r=b
-        
+    while a != b:
+        if a > b:
+            a = a - b
+        else:
+            b = b - a
+    return a
 
 
 def main(args):
     a = int(input("Podaj pierwszą liczbę: "))
     b = int(input("Podaj drugą liczbę: "))
+    print("Największy wspólny dzielnik {} i {} to {} " .format(a, b, nwd(a, b)))
     return 0
 
 if __name__ == '__main__':
