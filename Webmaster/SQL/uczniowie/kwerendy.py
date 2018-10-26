@@ -6,9 +6,12 @@ import sqlite3
 
 def kwerenda1(cur):
     cur.execute("""
-        SELECT klasa, nazwisko, imie, egz_mat FROM klasy INNER JOIN uczniowie ON klasy.id=uczniowie.id_klasa WHERE klasa='1A'
+        SELECT 
     """)
         
+        # SELECT klasa, COUNT(uczniowie.id) AS 
+        # SELECT klasa, COUNT(*) FROM klasy INNER JOIN uczniowie ON klasy.id=uczniowie.id_klasa GROUP BY klasa
+        # SELECT klasa, nazwisko, imie, egz_mat FROM klasy INNER JOIN uczniowie ON klasy.id=uczniowie.id_klasa WHERE klasa='1A'
         # SELECT nazwisko, imie, egz_hum, egz_mat FROM uczniowie WHERE egz_hum > 40 AND egz_mat > 40 ORDER BY nazwisko ASC 
         # WHERE plec=1
         # SELECT imie LIKE '%a'
