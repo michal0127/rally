@@ -6,9 +6,16 @@ import sqlite3
 
 def kwerenda1(cur):
     cur.execute("""
-        SELECT 
+        WITH srednie AS (
+            SELECT nazwisko, imie, AVG(ocena) AS poile FROM uczniowie
+            INNER JOIN oceny ON uczniowie.id=oceny.id_uczen
+            GROUP BY uczniowie.id
+        ) SELECT nazwisko, imie, poile FROM srednie
+        WHERE poile >= 4.0
     """)
         
+        # 
+        # SELECT nazwisko, imie, ocena FROM uczniowie INNER JOIN oceny ON uczniowie.id=oceny.id_uczen WHERE nazwisko='Nowak'
         # SELECT klasa, COUNT(uczniowie.id) AS 
         # SELECT klasa, COUNT(*) FROM klasy INNER JOIN uczniowie ON klasy.id=uczniowie.id_klasa GROUP BY klasa
         # SELECT klasa, nazwisko, imie, egz_mat FROM klasy INNER JOIN uczniowie ON klasy.id=uczniowie.id_klasa WHERE klasa='1A'
