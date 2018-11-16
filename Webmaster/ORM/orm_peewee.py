@@ -17,7 +17,8 @@ class BazaModel(Model):
         database = baza
 
 class Klasa(Model):
-    nazwa = CharField(null=false) # nie pozwala żeby klasa nie miała nazwy
+    nazwa = CharField(null=False) 
+    # nie pozwala żeby klasa nie miała nazwy
     roknaboru = IntegerField(default=0)
     rokmatury = IntegerField(default=0)
     
@@ -25,8 +26,9 @@ class Klasa(Model):
         database = baza
         
 class Uczen(Model):
-    imie = CharField(null=false) # nie pozwala żeby klasa nie miała nazwy
-    nazwisko = CharField(null=false)
+    imie = CharField(null=False) 
+    # nie pozwala żeby klasa nie miała nazwy
+    nazwisko = CharField(null=False)
     plec = BooleanField()
     klasa = ForeignKeyField(Klasa, related_name='uczniowie')
 
@@ -40,10 +42,27 @@ class Wynik(BazaModel):
     uczen = ForeignKeyField(Klasa, related_name='wyniki')
 
 def main(args):
-    if os.path_exist(baza_plik):
+    if os.path.exists(baza_plik):
         os.remove(baza.plik)
     baza.connect() # połączenie z bazą
     baza.create_tables([Klasa, Uczen, Wynik])
+    
+    kl2a = Klasa(nazwa="2A", roknaboru=2010, rokmatury=2013)
+    kl2a.save()
+    
+    kl1a = Klasa(nazwa="1A", roknaboru=2011, rokmatury=2014)
+    kl1a.save()
+    
+    u1 = Uczen(imie='Ferdynand', nazwisko='Kiepski', plec=False, klasa=kl2a)
+    u1.save()
+    u2 = Uczen(imie='Marian', nazwisko='Paździoch', plec=False, klasa=kl1a)
+    u2.save()
+    u3 = Uczen(imie='Arnold', nazwisko='Boczek', plec=False, klasa=kl1a)
+    u3.save()
+    
+    uczniowie= Uczen.select()
+    for uczen in uczniowie:
+        print(uczen.id, uczen.nazwisko, uczen.klasa.nazwa)
     
     return 0
 
