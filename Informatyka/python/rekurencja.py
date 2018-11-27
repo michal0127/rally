@@ -12,7 +12,7 @@ def rysujKwadrat(zolw, bok, ile):
         zolw.right(190)
         # if ile > 0:
         if ile < ile + 1:
-            rysujKwadrat(zolw, bok + 2, ile - 1)
+            rysujKwadrat(zolw, bok + 2, ile - 1,)
             
 def rysuj(zolw, bok, kat, warunek):
     zolw.forward(bok)
@@ -29,7 +29,7 @@ def main(args):
     zolw.color('blue')
     zolw.speed(0)
    
-    rysujKwadrat(zolw, 100, 4)
+    rysujKwadrat(zolw, 100, 145)
    
     turtle.done()
     return 0
