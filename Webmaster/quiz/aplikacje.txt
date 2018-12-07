@@ -1,0 +1,39 @@
+127.0.0.1:8000 - tak komputer widzi sam siebie
+
+Serwer - poznamy go po adresie IP4 i numerze Portu
+
+do komunikacji klient -> serwer potrzebny protokół, np. http dla stron www
+
+GET - zapytanie, pytamy o adres URL, 
+
+Przykład:
+https://en.wikipedia.org/wiki/2018_World_Rally_Championship
+
+Protokół: https:// - protokół szyfrowany, do kont, haseł itp,
+
+en.wikipedia.org - adres strony
+
+/wiki/2018_World_Rally_Championship - konkretny zasób na stronie
+
+Drugie:
+
+https://www.google.com/search?client=ubuntu&channel=fs&q=ip4&ie=utf-8&oe=utf-8
+
+https://
+
+www.google.com - adres strony
+
+/search - usługa search
+
+?client=ubuntu&channel=fs&q=ip4&ie=utf-8&oe=utf-8
+
+Kody odpowiedzi http:
+200 wszystko jest ok, zwrócono wartości
+404 serwer nie znalazł żadnych wartości, raczej nie było nic podobnego w przeszłości
+
+/ - główny katalog serwera, główny zasób
+
+widok (ang.viev)
+
+
+http://192.168.3.10:8000/ - luks robota
