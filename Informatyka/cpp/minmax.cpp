@@ -20,7 +20,7 @@ void drukuj(int tab[], int roz) {
         cout<< tab[i] << " ";
     }
 }
-
+ 
 int min1(int tab[], int roz) {
     int min = tab[0];
     for(int i = 1; i < roz; i++) {

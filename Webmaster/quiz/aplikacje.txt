@@ -1,39 +1,37 @@
-127.0.0.1:8000 - tak komputer widzi sam siebie
+Po czym poznać serwer??
+    Po adresie Ipv4
+    Numer portu
+    Gniazdo to połaczenie Ip i adresu portu
+        Numery portu są różne
+        np 127.0.0.1:5000
+        od nr gniazda zależy co ma się robić
 
-Serwer - poznamy go po adresie IP4 i numerze Portu
+Komunikajca klient-serwer
+    potrzebny jest do tego protokół
+    np. *http*
+        definiuje język za pomocą którego ma się rozmawiać
 
-do komunikacji klient -> serwer potrzebny protokół, np. http dla stron www
+        Zapytanie typu GET:
+            my piszemy adres URL (URI)
 
-GET - zapytanie, pytamy o adres URL, 
+        np
+        https://
+        pl.wikipiedia.org - nazwa serwera
 
-Przykład:
-https://en.wikipedia.org/wiki/2018_World_Rally_Championship
+        zamianie nazwę na ip
+        domyślny dla https ma port domyślny :80
 
-Protokół: https:// - protokół szyfrowany, do kont, haseł itp,
+        /wiki/HyperText_transfer_Protocol - zasób na serwerze
+        na ko„u pyta czy na serwerze jest taki zasób
 
-en.wikipedia.org - adres strony
+    ? oznacza zapytanie o zasób
 
-/wiki/2018_World_Rally_Championship - konkretny zasób na stronie
+Kod odpowiedzi:
+    200 - ok
+    404 - nie znaleziono
 
-Drugie:
+/ - głóœny katalog serwera
+dekorator zaczyna się od @
+    bierze funkcję jakąś tam i kojarzy ją
 
-https://www.google.com/search?client=ubuntu&channel=fs&q=ip4&ie=utf-8&oe=utf-8
-
-https://
-
-www.google.com - adres strony
-
-/search - usługa search
-
-?client=ubuntu&channel=fs&q=ip4&ie=utf-8&oe=utf-8
-
-Kody odpowiedzi http:
-200 wszystko jest ok, zwrócono wartości
-404 serwer nie znalazł żadnych wartości, raczej nie było nic podobnego w przeszłości
-
-/ - główny katalog serwera, główny zasób
-
-widok (ang.viev)
-
-
-http://192.168.3.10:8000/ - luks robota
+widok ang(wiev) - czyli, to, co bd w danym podkatalogu

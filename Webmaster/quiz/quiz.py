@@ -3,24 +3,24 @@
 #
 #  quiz.py
 #  
-from flask import Flask
-from flask import render_template
+from flask import g
+from modele import *
+from views import *
 
-app = Flask(__name__)
+# konfiguracja aplikacji
+app.config.update(dict(
+    SECRET_KEY='kjlsdajhksdfjkhnjksdfkjsdcjkcszd',
+))
 
-print(__name__)
+@app.before_request
+def before_request():
+    g.db = baza
+    g.db.connect()
 
-@app.route("/")
-def hello():
-    return "<h1>Witaj na serwerze!<h1><h2>Aplikacja quiz</h2>"
-    
-@app.route("/strona")
-def strona():
-    return render_template('strona.html')
-    
-@app.route("/klasa")
-def klasa():
-    return render_template('klasa.html')
+@app.after_request
+def after_request(response):
+    g.db.close()
+    return response
 
 
 if __name__ == '__main__':
