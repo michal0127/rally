@@ -1,8 +1,9 @@
 {% extends "szablon.html" %}
-{% block tytul %}Quiz - lista pytań{% endblock %}
-{% block h1 %}Quiz - lista pytań{% endblock %}
+{% block tytul %}Quiz lista pytań{% endblock %}
+{% block h1 %}Quiz{% endblock %}
 
 {% block tresc %}
+
   <h2>Pytania</h2>
   {% for p in query %}
   <p>
@@ -10,3 +11,4 @@
   </p>
   {% endfor %}
 {% endblock %}
+

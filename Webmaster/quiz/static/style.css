@@ -1,5 +1,5 @@
 body{
-  color: gold;
+  color: white;
   background-image: url('tlo.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -31,6 +31,16 @@ figure {
   margin-right: 5px;
 }
 
+#menu li: {
+  display: inline;
+}
+
+.info {
+  font-size: 30px;
+  font-weight: bold;
+  color: gold;
+}
+
 a {
-    color: gold;
+  color: white;
 }

@@ -1,23 +1,26 @@
 {% extends "szablon.html" %}
-{% block tytul %}Quiz - lista pytań{% endblock %}
-{% block h1 %}Quiz - lista pytań{% endblock %}
+{% block tytul %}Moja strona{% endblock %}
+{% block h1 %}Quiz - odpowiedz na pytania{% endblock %}
 
 {% block tresc %}
-<form>
-  {% for p in query %}
-  <p>
-      {{ p.id }} {{ p.pytanie }}<br>
-      <br>
-      {% for o in p.odpowiedzi %}
+  <form method="post">
 
-      <input type="radio" name="{{ p.id }}" value="{{ o.id }}">
-      {{ o.odpowiedz }}
-      <br>
-      {% endfor %}
+    <h2>Pytania</h2>
 
-  </p>
-  {% endfor %}
-  <input type="submit" name="Zapisz">
+    {% for p in query %}
+    <p>
+        {{ p.id }} {{ p.pytanie }}<br>
+        <br>
+        {% for o in p.odpowiedzi %}
 
-</form>
+        <input type="radio" name="{{ p.id }}" value="{{ o.id }}">
+        {{ o.odpowiedzi }}
+        <br>
+        {% endfor %}
+
+    </p>
+    {% endfor %}
+    <input type="submit" value="Zapisz">
+
+  </form>
 {% endblock %}
