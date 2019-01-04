@@ -1,4 +1,5 @@
 body{
+  color: gold;
   background-image: url('tlo.jpg');
   background-attachment: fixed;
   background-position: center;
@@ -28,4 +29,8 @@ html {
 figure {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+a {
+    color: gold;
 }
