@@ -12,11 +12,13 @@ app.config.update(dict(
     SECRET_KEY='kjlsdajhksdfjkhnjksdfkjsdcjkcszd',
 ))
 
+# to łączy sie z baza przed zapytaniem
 @app.before_request
 def before_request():
     g.db = baza
     g.db.connect()
-
+    
+# to rozłącza się z bazą po zapytaniu
 @app.after_request
 def after_request(response):
     g.db.close()
