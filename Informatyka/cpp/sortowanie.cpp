@@ -46,10 +46,10 @@ void wypelnij_sort(int tab[], int roz) {
 
 void sort_insert(int tab[], int roz) {
     cout << "\nSortowanie przez wstawianie\n";
-    int i, j, tmp;
+    int i, j, n, tmp;
     for(i = 1; i < n; i++) { // pętla wybiera kolejne elementy zaczynając od 2
     tmp =tab[i];
-    j = i - 1
+    j = i - 1;
     while(j >= 0 && tab[j] > tmp){
         tab[j+1] = tab[j];
         j--;
