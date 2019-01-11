@@ -8,6 +8,7 @@ from flask import Flask
 from flask import render_template, request
 from flask import redirect, url_for, flash
 from modele import *
+from forms import *
 
 app = Flask(__name__)
 print(__name__)
@@ -40,5 +41,6 @@ def quiz():
     return render_template('quiz.html', query=pytania)
 
 @app.route("/dodaj", methods=['GET', 'POST'])
-def dadaj():
-    pass
+def dodaj():
+    form = PytanieForm()
+    return render_template('dodaj.html', form=form)
