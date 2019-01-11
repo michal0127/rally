@@ -1,12 +1,13 @@
 body{
   color: white;
-  background-image: url('tlo.jpg');
+  background-image: url('tlo.png');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
+
 html {
-  font-size: 1rem;
+  font-size: 2rem;
 }
 
 @include media-breakpoint-up(sm) {
