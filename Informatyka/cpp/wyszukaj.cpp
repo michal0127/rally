@@ -52,6 +52,19 @@ int szukaj_bin_it(int tab[], int roz, int szuk) {
 }
 
 
+int szukaj_bin_rek(int tab[], int szuk, int p, int k) {
+    if (p <= k) {
+        int s = (p + k) / 2;
+        if (tab[s] == szuk) return s;
+        if (szuk < tab[s])
+            return szukaj_bin_rek(tab, szuk, p, s-1);
+        else
+            return szukaj_bin_rek(tab, szuk, s+1, k);
+    }
+    return -1;
+}
+
+
 int main(int argc, char **argv)
 {
     int roz = 20;
@@ -63,7 +76,7 @@ int main(int argc, char **argv)
     int szuk = 0;
     cout << "\nPodaj liczbę: ";
     cin >> szuk;
-    int indeks = szukaj_bin_it(tab, roz, szuk);
+    int indeks = szukaj_bin_rek(tab, szuk, 0, roz - 1);
     if (indeks >= 0)
         cout << "\nZnaleziona!" << indeks << endl;
     else
