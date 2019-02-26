@@ -1,0 +1,11 @@
+appache
+PHP - interpreter działa w serwerze, do generowania stron www potrzebne coś innego
+bazy danych - mySQL, mariaDB,
+
+serwer lamp Lamp (Linux Apache My SQL)
+    albo
+    WAMP (Windows Appache MySQL PHP)
+    apt-get install apache2 libapache2-mod-php7.2 php pgp-gd php-sqlite3    ------> Linuks
+    
+    Windows
+    
