@@ -1,0 +1,26 @@
+Architektura von Neumanna
+
+Pamięć:
+RAM RandomAccesMemory - pamięć operacyjna, jest ulotna, szybka, swobodny dostęp, 
+
+Pamięć stała: SSD, HDD - HardDiskDrive, CD/DVD, taśmy, dyskietki,
+
+Pamięć sekwencyjna - aby dostać się do krórejś części danych trzeba odczytać wszystko co ją poprzedza
+
+ROM ReadOnlyMemory - swobodny dostęp
+
+BIOS BasicInputOutputSystem - przy uruchomieniu sprawdza czy wszystko0 jest na miejscu
+
+UEFI - sterowniki, zabezpieczenia platformy, klucze szyfrujące, 
+
+Firmware - software zapisany w ROM
+
+ASEMBLER
+
+CPU - urządzenie sekwencyjne, składa się z ALU, Rejestrów, 64 - bitowe -> podstawowy rozmiar słowa procesora,
+
+4 - bitowe
+
+pamięć, cpu, urządzenia wyjścia wejścia - połączone są magistralą ? szyną systemową - taktowanie
+
+magistrala podaje adresy i składa się z szyny danych, steruje procesami
