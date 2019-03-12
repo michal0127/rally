@@ -24,3 +24,7 @@ CPU - urządzenie sekwencyjne, składa się z ALU, Rejestrów, 64 - bitowe -> po
 pamięć, cpu, urządzenia wyjścia wejścia - połączone są magistralą ? szyną systemową - taktowanie
 
 magistrala podaje adresy i składa się z szyny danych, steruje procesami
+
+
+w linuxie luks terminal
+ w windowsie słaby cmd
