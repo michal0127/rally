@@ -1,0 +1,37 @@
+SQL
+
+sqlite3 nazwa.db < nazwa2.sql tworzy bazę danych na podstawie podanego pliku
+sqlite3 nazwa.db - otwiera ten plik
+
+sqlite {
+    .tables - wyswietla tabele
+}
+
+jak się dane powtarzają to zużywa więcej RAMu
+
+Normalizacja to bezstratny proces organizowania danych w tabelach mający na celu zmniejszenie ilości danych składowanych w bazie oraz wyeliminowanie potencjalnych anomalii opisanych powyżej. 
+
+atomowość danych - każde pole przechowuje 1 informację = jest unikalne
+
+.shema pokazuje kod pliku _.sql
+
+
+link do strony:      https://www.sqlpedia.pl/projektowanie-i-normalizacja-bazy-danych/
+
+1NF - Pierwsza postać normalna to podstawa baz – mówi o atomowości danych. Czyli tabela (encja) przechowuje dane w sposób atomowy. Każde pole przechowuje jedną informację, dzięki czemu możemy dokonywać efektywnych zapytań. Wprowadza także pojęcie istnienie klucza głównego identyfikującego bezpośrednio każdy wiersz –unikalności. Warto pamiętać również o tym, że w dziedzinie teorii zbiorów kolejność wierszy jest dowolna (chyba że jawnie taki zbiór posortujemy).
+
+Przejście na 1NF, nie może powodować utraty żadnych informacji, nie ma znaczenia kolejność elementów w zbiorze. Ta zasada dotyczy każdej postaci normlanej.
+
+Mówimy, że tabela (encja) jest w pierwszej postaci normalnej, kiedy wiersz przechowuje informacje o pojedynczym obiekcie, nie zawiera kolekcji, posiada klucz główny (kolumnę lub grupę kolumn jednoznacznie identyfikujących go w zbiorze) a dane są atomowe. Zobaczmy, jak będzie wyglądała nasza struktura, jeśli spróbujemy doprowadzić ją do 1NF :
+
+2NF (druga postać normalna) - Ta postać określa esencję dobrego projektowania bazy. Mówi o tym, że każda tabela powinna przechowywać dane dotyczące tylko konkretnej klasy obiektów.
+Jeśli mówimy o encji (tabeli) np. Klienci, to wszystkie kolumny opisujące elementy takiej encji, powinny dotyczyć Klientów a nie jakiś innych obiektów (np. ich zamówień).
+
+Zatem normalizując do 2NF, wydzielić należy zbiór atrybutów (kolumn) który jest zależny tylko od klucza głównego. Wszystkie atrybuty informacyjne (nie należące do klucza), muszą zawierać informacje o elementach tej konkretnej klasy (encji, tabeli) a nie żadnej innej. Kolumny opisujące inne obiekty, powinny trafić do właściwych encji (tabel) w których te obiekty będziemy przechowywać.
+
+W naszym przykładzie wykonajmy analizę bazy zamówień, która jest już w 1NF. Oznaczmy na początek atrybuty informacyjne które nie należą do klasy Zamówień (nie zależą funkcyjnie od klucza głównego).
+
+
+3NF - Trzecia postać normalna głosi, że kolumna informacyjna nie należąca do klucza nie zależy też od innej kolumny informacyjnej, nie należącej do klucza. Czyli każdy niekluczowy argument jest bezpośrednio zależny tylko od klucza głównego a nie od innej kolumny.
+
+W naszym przypadku widać, że kolumny informacyjne związane z kosztami danego zamówienia oraz stawką podatku VAT, są ze sobą skorelowane. Z jednej z nich można śmiało zrezygnować, nie tracąc żadnej informacji (każda z nich zależy od klucza głównego, ale również od pozostałych dotyczących wartości). Możemy wyznaczyć np. wartość brutto na podstawie stawki VAT i wartości netto itd..

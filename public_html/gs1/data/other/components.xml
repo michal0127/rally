@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<channel><item><title><![CDATA[bsmenu]]></title><slug>bsmenu</slug><value><![CDATA[&lt;li class=&quot;nav-link &lt;?php echo $item-&gt;classes; echo ($item-&gt;isCurrent)?&#039; active&#039;:&#039;&#039;; ?&gt;&quot;&gt;
+<channel><item><title><![CDATA[bs_menu]]></title><slug>bs_menu</slug><value><![CDATA[&lt;li class=&quot;nav-link &lt;?php echo $item-&gt;classes; echo ($item-&gt;isCurrent)?&#039; active&#039;:&#039;&#039;; ?&gt;&quot;&gt;
   &lt;a class=&quot;nav-link&quot; href=&quot;&lt;?php echo htmlspecialchars($item-&gt;link); ?&gt;&quot;&gt;
     &lt;?php echo htmlspecialchars($item-&gt;text); echo ($item-&gt;isCurrent)?&#039; &lt;span class=&quot;sr-only&quot;&gt;(aktualna)&lt;/span&gt;&#039;:&#039;&#039;;?&gt;
   &lt;/a&gt;
@@ -13,4 +13,9 @@
 &lt;li&gt;Growing community&lt;/li&gt; 
 &lt;/ul&gt;
 &lt;p&gt;This is your sidebar text. Please change me in &lt;em&gt;Theme -&gt; Edit Components&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://get-simple.info/download/&quot;&gt;Download the Latest GetSimple&lt;/a&gt;&lt;/p&gt;]]></value></item><item><title><![CDATA[Tagline]]></title><slug>tagline</slug><value><![CDATA[Just Another GetSimple Website]]></value></item></channel>
+&lt;p&gt;&lt;a href=&quot;http://get-simple.info/download/&quot;&gt;Download the Latest GetSimple&lt;/a&gt;&lt;/p&gt;]]></value></item><item><title><![CDATA[tabele_css]]></title><slug>tabele_css</slug><value><![CDATA[&lt;style&gt;
+table {
+  width: 50%;
+  background: #eee;
+}
+&lt;/style&gt;]]></value></item><item><title><![CDATA[Tagline]]></title><slug>tagline</slug><value><![CDATA[Just Another GetSimple Website]]></value></item></channel>

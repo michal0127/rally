@@ -1,0 +1,27 @@
+{% extends "szablon.html" %}
+{% block tytul %}Moja strona{% endblock %}
+{% block h1 %}Quiz - odpowiedz na pytania{% endblock %}
+
+{% block tresc %}
+  <form method="post">
+      <center>
+
+    <h2>Pytania</h2>
+
+    {% for p in query %}
+    <p>
+        {{ p.id }} {{ p.pytanie }}<br>
+        <br>
+        {% for o in p.odpowiedzi %}
+
+        <input type="radio" name="{{ p.id }}" value="{{ o.id }}">
+        {{ o.odpowiedzi }}
+        <br>
+        {% endfor %}
+
+    </p>
+    {% endfor %}
+    <input type="submit" value="Zapisz">
+    </center>
+  </form>
+{% endblock %}

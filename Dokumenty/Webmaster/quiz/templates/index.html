@@ -1,0 +1,18 @@
+{% extends "szablon.html" %}
+{% block tytul %}Quiz - pytania bez ściemy{% endblock %}
+{% block h1 %}Quiz dla odważnych{% endblock %}
+
+
+</head>
+
+{% block tresc %}
+    <div id="komunikaty">
+      {% with komunikaty = get_flashed_messages(with_categories=true) %}
+      {% if komunikaty %}
+        {% for kategoria, komunikat in komunikaty %}
+        <center><p class="{{ kategoria }}">{{ komunikat }}</p></center>
+        {% endfor %}
+      {% endif %}
+      {% endwith %}
+    </div>
+{% endblock %}
